@@ -13,14 +13,19 @@ border: none;
 }
 nav{ 
  display: flex;
- justify-content: space-around;
+ justify-content: space-between;
 }
 
 .logo{
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+ 
 }
+.nav-content{
+  border: 5px solid rgb(93, 93, 185); 
+}
+
 h1{
   font-size: 2.8rem;
   font-weight: 700;
@@ -34,39 +39,40 @@ h1{
   padding-right: 10px;
 }
 
-.nav-content{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-right: 1.8rem;
-  list-style: none;
-}
-
-.nav-content li a{
-  text-decoration: none;
-}
 .nav-content-text{
   display: flex;
   justify-content: space-around;
   align-items: center;
-  color: #3C354F;
+  padding-right: 1.8rem;
+  list-style: none;
+ 
 }
 
+ .nav-content-text a{
+  text-decoration: none;
+  color: #3C354F;
+  font-size: 18px;
+  font-weight: 500;
+  padding-right: 1rem;
+font-weight: 500;
+color: #3C354F;
+}
 .follow-us{
   width: 262px;
   height: 56px;
   background-color:rgba(11, 2, 35, 0.10) ;
   border-radius:8px ;
 display: flex;
-justify-content: space-around;
+justify-content: center;
 align-items: center;
 }
-
-.follow-us-text .nav-content-text{
-font-size: 18px;
+  .follow-us a{
+  text-decoration: none;
+  font-size: 18px;
 font-weight: 500;
 color: #3C354F;
 }
+
 .vector{
   width: 33px;
   height: 24px;
@@ -80,25 +86,28 @@ color: #3C354F;
 /*banner style*/
 .banner{
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   background-image: url(images/Group\ 14.png);
-}
-/*.banner-content{
-  text-align: center;
+  max-height: 800px;
   
-}*/
+}
+
 
 .banner-title{
 font-size: 3rem;
 font-weight: 600;
 color: #0B0223;
+margin-bottom: 0;
 }
 .goat{
   font-size: 95px;
   font-weight: 800;
+  margin-top: 0;
+  margin-bottom: 0;
   background-image: linear-gradient(180deg,  #F948B2 0%, #8758F1 100%);
   -webkit-text-fill-color: transparent;
+   background-clip: text;
   -webkit-background-clip: text;
 }
 .banner-description{
@@ -115,6 +124,156 @@ color: #0B0223;
   border: none;
 }
 .banner-img{
-  width: 500px;
-  height: 450px;
+  width: 100%;
+  height: 100%s;
+  padding: 25%;
+  
+}
+
+/*feature style start here*/
+.feature-text{
+  text-align: center;
+}
+
+ .feature-title{
+font-size: 3rem;
+font-weight: 700;
+color: #0B0223;
+}
+.funny-video{
+  background-image: linear-gradient(180deg,  #F948B2 0%, #8758F1 100%);
+  -webkit-text-fill-color: transparent;
+   background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.feature-items{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: space-around;
+  align-items: center;
+  margin: auto;
+  gap: 1rem;
+  }
+
+.feature-description{
+  font-size: 18px;
+  font-weight: 400;
+  color: #534C64;
+}
+
+.img{
+  color: #534C64;
+  font-size: 20px;
+  font-weight: 500;
+}
+/*play section's style*/
+
+.play-container{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.play-text{
+  text-align: right;
+ 
+  
+}
+.play-title{
+  font-size: 3rem;
+  font-weight: 700;
+  color: #0B0223;
+}
+
+.play-description{
+color: #534C64;
+font-size: 18px;
+font-weight: 400;
+}
+.play-image{
+  max-width: 600px;
+  
+}
+.play-img-1{
+  width: 100%;
+  border-radius: 8px;
+}
+.play-img-2{
+  width: 55%;
+  border-radius: 8px;
+  position: relative;
+  bottom: 275px;
+   right: 150px;
+}
+
+/*icon-style*/
+.icon-container{
+  align-items: center;
+}
+
+.icon{
+  display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.icon-column-5{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  
+}
+.icon-column-4{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-left: 3rem;
+  margin-top: 1.5rem;
+}
+/*footer-style*/
+.footer-container{
+  background-color:#0B0223 ;
+  color: #fff;
+  align-items: center;
+}
+.logo-1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.footer-items ul> li, .policy ul li{
+  list-style: none;
+  padding-left: 1.5rem;
+}
+li a{
+  color: white;
+  text-decoration: none;
+}
+.footer-items ul, .policy ul{
+  display: flex;
+justify-content: center;
+align-items: center;
+}
+.footer-icon{
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+ .copyright{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 0.5rem;
+}
+
+/*responsive area starts here */
+
+@media screen and (max-width: 425px) {
+  nav{
+flex-direction: column;
+}
+.nav-content-text{
+  flex-direction: column;
+}
+
 }

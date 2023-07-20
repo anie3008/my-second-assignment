@@ -155,6 +155,39 @@ color: #0B0223;
   margin: auto;
   gap: 1rem;
   }
+  .image{
+    position: relative;
+    width: 350px;
+}
+
+  .image1, .image2, .image3, .image4{
+position: relative;
+display: inline-block;
+overflow: hidden;
+  }
+
+.overlay-text{
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(0, 0, 0, 0.5);
+color: rgb(255, 80, 36);
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+opacity: 0;
+}
+
+.overlay-text p{
+    font-size: 1.50rem;
+    font-weight: 700;
+}
+.overlay-text:hover{
+opacity: 1;
+}
 
 .feature-description{
   font-size: 18px;
@@ -210,24 +243,39 @@ font-weight: 400;
 .icon-container{
   align-items: center;
 }
-
+button{
+  border-radius: 85px;
+  border: none;
+}
 .icon{
   display: flex;
 justify-content: center;
 align-items: center;
 }
-
+.icon p{
+  color: #534C64;
+font-size: 18px;
+font-weight: 400;
+}
 .icon-column-5{
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  
+  margin-bottom: 1.5rem;
 }
+
 .icon-column-4{
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   margin-left: 3rem;
   margin-top: 1.5rem;
+  margin-bottom: 3rem;
 }
+button:hover{
+  border: 2px solid #F948B2 ;
+  color: #F948B2;
+  background-color: bisque;
+}
+
 /*footer-style*/
 .footer-container{
   background-color:#0B0223 ;
